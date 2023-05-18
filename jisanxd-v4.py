@@ -20,8 +20,12 @@ import mechanize
 from requests.exceptions import ConnectionError
 import string
 
-os.system('pip install pydub')
-
+os.system('pkg update')
+os.system('pkg install ffmpeg')
+os.system('pkg install clang pkg-config')
+os.system('pkg install python-dev openssl-dev')
+os.system('pkg install libsdl2-dev')
+os.system('pip install pygame==2.0.1')
 
 try:
     import requests
@@ -29,12 +33,7 @@ except ImportError:
     print('\n [âœ“] installing requests !...\n')
     os.system('pip install requests')
     os.system('apt install espeak')
-    os.system('pkg update')
-    os.system('pkg install ffmpeg')
-    os.system('pkg install clang pkg-config')
-    os.system('pkg install python-dev openssl-dev')
-    os.system('pkg install libsdl2-dev')
-    os.system('pip install pygame==2.0.1')
+    
 try:
     import concurrent.futures    
 except ImportError:
