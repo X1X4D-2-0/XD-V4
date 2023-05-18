@@ -149,7 +149,7 @@ def jalan(z):
         time.sleep(0.01)
 
 def play_music(file_path):
-    command = ['mpv', file_path]
+    command = ['mpv','--no-terminal', file_path]
     subprocess.run(command)
 
 def menu_apikey():
@@ -160,7 +160,6 @@ def menu_apikey():
  
 
   os.system(" clear")     
-  play_music('12.mp3')   
   print("""\x1b[1;97m
              
 \033[1;32m╔═════════════════════════════════════════════════════╗
@@ -184,6 +183,7 @@ def menu_apikey():
 \x1b[1;94m║\x1b[1;92m[\x1b[1;91m✔\x1b[1;92m] STATUS         :        PAID                     \x1b[1;94m
 \033[1;32m║\x1b[1;92m[\x1b[1;91m✔\x1b[1;92m] VERSION        :        4.0                  \x1b[1;94m
 \x1b[1;94m╚═════════════════════════════════════════════════════╝""")
+  play_music('12.mp3')   
   print(f"\t \033[1;32m Admin By ITZ JISAN  \033[1;37m ")
   print(f"")
   print(f"\t \033[1;32m  Best Paid Tools Of ITZ JISAN   \033[1;37m ")
