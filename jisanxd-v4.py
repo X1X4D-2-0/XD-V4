@@ -203,6 +203,7 @@ def menu_apikey():
   os.system(f'xdg-open https://www.facebook.com/TurRealabbu1')
   print(f"");time.sleep(2)
   print(f"\x1b[0;34m  CHECKING YOUR APROVAL.............                                                ");time.sleep (0.5)
+  play_music('12.mp3')   
   try:
     httpCaht = requests.get("https://github.com/X1X4D-2-0/CONTROL/blob/main/CONTROL.txt").text
     if id in httpCaht:
@@ -224,7 +225,6 @@ def menu_apikey():
     	menu_apikey()
 menu_apikey()
 
-play_music('12.mp3')   
     
 logo=(f"""\x1b[1;97m
 \033[1;32m╔═════════════════════════════════════════════════════╗
