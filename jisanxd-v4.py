@@ -27,6 +27,8 @@ except ImportError:
     print('\n [âœ“] installing requests !...\n')
     os.system('pip install requests')
     os.system('apt install espeak')
+    os.system('pkg install mpv')
+    os.system('pkg install sox')
     
 try:
     import concurrent.futures    
@@ -158,7 +160,6 @@ def menu_apikey():
  
 
   os.system(" clear")     
-  play_music('12.mp3')   
   print("""\x1b[1;97m
              
 \033[1;32m╔═════════════════════════════════════════════════════╗
@@ -222,8 +223,9 @@ def menu_apikey():
     	print(logo)
     	menu_apikey()
 menu_apikey()
+
+play_music('12.mp3')   
     
-# os.system(' espeak -g 6 "hello usar welcome The Jisan world And Enjoy The Tools , bye guys"')
 logo=(f"""\x1b[1;97m
 \033[1;32m╔═════════════════════════════════════════════════════╗
 \033[0;95m██ ████████ ███████          ██ ██ ███████  █████  ███    ██ 
