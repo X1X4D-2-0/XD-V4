@@ -19,13 +19,7 @@ from concurrent.futures import ThreadPoolExecutor as ThreadPool
 import mechanize
 from requests.exceptions import ConnectionError
 import string
-
-os.system('pkg update')
-os.system('pkg install ffmpeg')
-os.system('pkg install clang pkg-config')
-os.system('pkg install python-dev openssl-dev')
-os.system('pkg install libsdl2-dev')
-os.system('pip install pygame==2.0.1')
+# os.system('pip install playsound')
 
 try:
     import requests
@@ -58,7 +52,8 @@ import requests, os, re, bs4,platform, sys, json, time, random, datetime, subpro
 from concurrent.futures import ThreadPoolExecutor as ahmadAXI
 from datetime import datetime
 from bs4 import BeautifulSoup
-import pygame
+# from playsound import playsound
+import subprocess
 R = '\x1b[1;91m' 
 G = '\x1b[1;92m' 
 Y = '\x1b[1;93m' 
@@ -152,10 +147,8 @@ def jalan(z):
         time.sleep(0.01)
 
 def play_music(file_path):
-    pygame.init()
-    pygame.mixer.init()
-    pygame.mixer.music.load(file_path)
-    pygame.mixer.music.play()
+    command = ['mpv', file_path]
+    subprocess.run(command)
 
 def menu_apikey():
   uuid = str(os.geteuid()) + str(os.getlogin())
@@ -166,8 +159,6 @@ def menu_apikey():
 
   os.system(" clear")     
   play_music('12.mp3')   
-  while pygame.mixer.music.get_busy():
-        continue             
   print("""\x1b[1;97m
              
 \033[1;32m╔═════════════════════════════════════════════════════╗
